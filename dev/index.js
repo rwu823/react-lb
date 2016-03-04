@@ -4,20 +4,22 @@ const {render} = require('react-dom')
 const LB = require('../src/index.jsx')
 
 const App = React.createClass({
+  openLB1(e){
+    this.refs.LB1.open()
+  },
   render(){
     const ss = {
       padding: 20,
       height: 300,
       width: 700,
     }
-    const ssm = {
-      //backgroundColor: 'rgba(0,0,0, .1)'
-    }
+
     return (
       <div>
-        <LB show={true} maskStyle={ssm}>
+        <a onClick={this.openLB1}>Open LB1</a>
+        <LB ref="LB1">
           <div style={ss}>
-            hello Lightbox!!
+            LightBox 1
           </div>
         </LB>
       </div>

@@ -40,7 +40,7 @@ const LB = React.createClass({
       opacity: isShow ? 1 : 0,
       pointerEvents: isShow ? 'all' : 'none',
     }, this.props.maskStyle)
-console.log(this.props.maskStyle)
+
     return (
       <div className={this.props.className} style={mergeMaskStyle} onClick={this.close}>
         <div style={viewStyle} onClick={this.preventClose}>
